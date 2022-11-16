@@ -57,6 +57,8 @@ jobs:
       - checkout
       - node/install-packages
       - snyk/scan:
+          context:
+            - cicd-workshop
           fail-on-issues: true
 
   build-docker:
