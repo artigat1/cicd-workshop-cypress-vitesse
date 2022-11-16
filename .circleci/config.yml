@@ -8,7 +8,7 @@ parameters:
     default: false
 
 orbs:
-  path-filtering: circleci/path-filtering@0.1.13
+  path-filtering: circleci/path-filtering@0.1.3
   continuation: circleci/continuation@0.3.1
 
 jobs:
