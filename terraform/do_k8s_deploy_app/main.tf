@@ -16,7 +16,7 @@ terraform {
   }
 
   backend "remote" {
-    organization = "zmarkan-demos"
+    organization = "artigat1"
     workspaces {
       name = "cicd-workshop-do-deploy"
     }
@@ -24,5 +24,5 @@ terraform {
 }
 
 provider "kubernetes" {
- 
+
 }
