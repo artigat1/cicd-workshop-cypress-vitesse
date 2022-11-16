@@ -106,7 +106,7 @@ workflows:
       - dependency-vulnerability-scan
       - deploy-to-heroku:
           name: Deploy - Dev
-          context: workshop_deployment-dev
+          context: cicd-workshop
           environment: dev
       - build-docker:
           requires:
@@ -123,7 +123,7 @@ workflows:
           environment: prod
           requires:
             - hold-for-approval
-          context: workshop_deployment-prod
+          context: cicd-workshop
 
   nightly-build:
     when: << pipeline.parameters.scheduled >>
@@ -135,5 +135,5 @@ workflows:
       - dependency-vulnerability-scan
       - deploy-to-heroku:
           name: Deploy - Prod
-          context: workshop_deployment-dev
+          context: cicd-workshop
           environment: dev
