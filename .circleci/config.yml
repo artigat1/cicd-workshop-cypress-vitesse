@@ -134,5 +134,11 @@ workflows:
         - create_do_k8s_cluster:
             context:
               - cicd-workshop
+            requires:
+              - build
+              - lint
+              - test
+              - build_docker_image
+              - dependency_vulnerability_scan
 
 # VS Code Extension Version: 1.0.2
