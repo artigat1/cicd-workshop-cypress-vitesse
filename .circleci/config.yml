@@ -121,7 +121,7 @@ jobs:
 
   deploy_to_k8s:
     docker:
-      - image: cimg/node:14.16.0
+      - image: cimg/base@stable
     steps:
       - checkout
       - install_doctl:
