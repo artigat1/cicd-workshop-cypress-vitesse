@@ -9,14 +9,14 @@ terraform {
     kubernetes = {
       source = "hashicorp/kubernetes"
       version = "1.13.3"
-    }    
+    }
     local = {
       source = "hashicorp/local"
     }
   }
 
   backend "remote" {
-    organization = "zmarkan-demos"
+    organization = "artigat1"
     workspaces {
       name = "cicd-workshop-do"
     }
